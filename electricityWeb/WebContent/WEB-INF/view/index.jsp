@@ -14,7 +14,7 @@
 		<div class ="text-center">
 			<h1>ELECTRICITY</h1>
 		</div>
-		<nav class="navbar navbar-expand-sm bg-light navbar-light">
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     			<ul class="navbar-nav">
       			<li class="nav-item active"><a class="nav-link" href="/ElectricityWeb">Home</a></li>
       			<li class="nav-item"><a class="nav-link" href="product">Products</a></li>

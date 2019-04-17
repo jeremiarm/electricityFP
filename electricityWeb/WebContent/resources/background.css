@@ -3,24 +3,10 @@ body,html{
 }
 
 .bg { 
-  background-color: gray;
+  background-color: white;
 }
 
-.bg1 { 
-  background-image: url("img/move.jpg");
-  height: 100%; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
-.bg2 { 
-  background-image: url("img/moveview.jpg");
-  height: 100%; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .laptop{
 	content:url("img/laptop.jpg");
