@@ -34,7 +34,7 @@
 		             </ul>
 		           </div>
 				</div>
-				<div class="col-sm-6">
+				<div class="col-sm-8">
 					<div>
 		               <a class="laptop" href="product-detail"></a>
 		               <ul class="list-unstyled mb-0">
