@@ -11,23 +11,28 @@ public class WebController {
 		return "index";
 	}
 	
-	@RequestMapping(value="/items")
-	public String item() {
-		return "item";
+	@RequestMapping(value="/product")
+	public String product() {
+		return "product";
 	}
 	
-	@RequestMapping(value="/shops")
+	@RequestMapping(value="/shop")
 	public String shop() {
 		return "shop";
 	}
 	
 	@RequestMapping(value="/shop-detail")
 	public String shopdetail() {
-		return "shopdetail";
+		return "shop-detail";
 	}
 	
-	@RequestMapping(value="/item-detail")
-	public String itemdetail() {
-		return "itemdetail";
+	@RequestMapping(value="/product-detail")
+	public String productdetail() {
+		return "product-detail";
+	}
+	
+	@RequestMapping(value="/contact")
+	public String contact() {
+		return "contact";
 	}
 }

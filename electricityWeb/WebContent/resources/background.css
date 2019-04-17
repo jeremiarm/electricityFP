@@ -1,0 +1,63 @@
+body,html{
+	height: 100%
+}
+
+.bg { 
+  background-color: gray;
+}
+
+.bg1 { 
+  background-image: url("img/move.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg2 { 
+  background-image: url("img/moveview.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.laptop{
+	content:url("img/laptop.jpg");
+	width:350px;
+	height:350px;
+	float:left;
+	border:1px;
+	margin-bottom:25px;
+}
+
+.handphone{
+	content:url("img/handphone.jpg");
+	width:350px;
+	height:350px;
+	float:left;
+	border:1px;
+	margin-bottom:25px;
+}
+
+.shop1{
+	content:url("img/shop1.jpg");
+	width:350px;
+	height:350px;
+	float:left;
+	border:1px;
+	margin-bottom:25px;
+}
+
+.shop2{
+	content:url("img/shop2.jpg");
+	width:350px;
+	height:350px;
+	float:left;
+	border:1px;
+	margin-bottom:25px;
+}
+
+.colour {
+	background-color: rgba(255,255,255,0.6);
+}
