@@ -24,7 +24,7 @@
 		</nav>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4">
+				<div class="col-sm-2 order-1">
 		           <div class="border p-4 rounded mb-4">
 		             <h3 class="mb-3 h6 text-uppercase text-black d-block">Categories</h3>
 		             <ul class="list-unstyled mb-0">
@@ -34,21 +34,26 @@
 		             </ul>
 		           </div>
 				</div>
-				<div class="col-sm-8">
+				<div class="col-sm-10 order-2">
 				<c:forEach var="tempProducts" items="${products}">
 				<c:url var="productDetailsLink" value="/product-detail">
 		        		<c:param name="productId" value="${tempProducts.id}" />
 		        </c:url>
-					<div>
-		               <ul class="list-unstyled mb-0">
-		               		<li class="mb-1"><span>${tempProducts.productName}</span></li>
-		               		<li class="mb-1"><span>${tempProducts.productPrice}</span></li>
-		               		<li class="mb-1"><span>${tempProducts.productDescription}</span></li>
-		               		<li class="mb-1"><span><a href="${productDetailsLink}">Details</a></span></li>
-		               </ul>
-		               <br>
-		               <br>
+		        	<br><br>
+					<div class="row border">
+					 	<div class="col-sm-6">
+		               		<img src="<c:url value="/resources/img/image1.jpg" />"/>
+		               	</div>
+		               	<div class="col-sm-6">
+		               		<ul class="list-unstyled mb-0">
+		               			<li class="mb-1"><span>Nama			:${tempProducts.productName}</span></li>
+		               			<li class="mb-1"><span>Harga		:${tempProducts.productPrice}</span></li>
+		               			<li class="mb-1"><span>${tempProducts.productDescription}</span></li>
+		               			<li class="mb-1"><span><a href="${productDetailsLink}">Details</a></span></li>
+		               		</ul>
+		               	</div>
 		    		</div>
+		    		<br><br>
 				</c:forEach>
 					
 				</div>
