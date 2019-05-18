@@ -9,6 +9,14 @@ This web application collects informations about electronic devices and the shop
 
 This application is intended to finish a final project of Framework Programming.
 
+## Before you use it...
+
+1. Open any MySQL interface (phpmyadmin, MySQL Workbench, etc.)
+2. Execute "user.sql" scripts
+3. Create a database called "electricity"
+4. Dump the sample data from "products.sql" and "seller.sql" to the database "electricity" (seller.sql will be added later!)
+5. Let MySQL running and you're good to go.
+
 Here are several useful links to use Spring Framework
 
 ### The Eclipse-based IDE for Spring Framework, Spring Tool Suite (no need to install it!)
