@@ -39,7 +39,7 @@
 					<c:param name="sellerId" value="${tempSellers.sellerId}"/>
 				</c:url>
 					<div>
-		               <img src="<c:url value="/resources/img/shop${tempSellers.sellerId}.jpg"/>"/>
+		               <img src="<c:url value="/resources/img/${tempSellers.sellerImage}"/>"/>
 		               <ul class="list-unstyled mb-0">
 		               		<li class="mb-1"><span>${tempSellers.sellerName}</span></li>
 		               		<li class="mb-1"><span>${tempSellers.sellerAddress}</span></li>

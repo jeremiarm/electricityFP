@@ -32,16 +32,17 @@ CREATE TABLE `seller` (
   `seller_id` int(11) NOT NULL,
   `seller_name` varchar(50) NOT NULL,
   `seller_address` text NOT NULL,
-  `seller_description` text NOT NULL
+  `seller_description` text NOT NULL,
+  `seller_image` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `seller`
 --
 
-INSERT INTO `seller` (`seller_id`, `seller_name`, `seller_address`, `seller_description`) VALUES
-(1, 'Rival\'s Shop', 'Jl. Diponegoro 14 Jakarta Selatan', 'Menjual spare part laptop, bekas dan baru'),
-(2, 'F5 Shop', 'Jl. Soekarno Hatta 57, Malang', 'Menjual handphone merk terbaru');
+INSERT INTO `seller` (`seller_id`, `seller_name`, `seller_address`, `seller_description`,`seller_image`) VALUES
+(1, 'Rival\'s Shop', 'Jl. Diponegoro 14 Jakarta Selatan', 'Menjual spare part laptop, bekas dan baru','shop1.jpg'),
+(2, 'F5 Shop', 'Jl. Soekarno Hatta 57, Malang', 'Menjual handphone merk terbaru','shop2.jpg');
 
 --
 -- Indexes for dumped tables

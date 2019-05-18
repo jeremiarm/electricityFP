@@ -39,7 +39,6 @@ public class WebController {
 	@RequestMapping(value="/shop")
 	public String shop(Model theModel) {
 		List<Seller> theSellers = sellerService.getSellers();
-		
 		theModel.addAttribute("sellers", theSellers);
 		
 		return "shop";

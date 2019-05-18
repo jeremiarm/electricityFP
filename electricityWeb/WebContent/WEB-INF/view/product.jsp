@@ -42,7 +42,7 @@
 		        	<br><br>
 					<div class="row border">
 					 	<div class="col-sm-6">
-		               		<img src="<c:url value="/resources/img/image${tempProducts.id}.jpg" />"/>
+		               		<img style="width:450px; height:250px;" src="<c:url value="/resources/img/${tempProducts.productImage}"/>"/>
 		               	</div>
 		               	<div class="col-sm-6">
 		               		<ul class="list-unstyled mb-0">

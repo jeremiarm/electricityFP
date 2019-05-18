@@ -24,11 +24,10 @@ public class Seller {
 	
 	@Column(name="seller_description")
 	private String sellerDescription;
-
-	public int getSellerId() {
-		return sellerId;
-	}
-
+	
+	@Column(name="seller_image")
+	private String sellerImage;
+	
 	public void setSellerId(int sellerId) {
 		this.sellerId = sellerId;
 	}
@@ -56,12 +55,25 @@ public class Seller {
 	public void setSellerDescription(String sellerDescription) {
 		this.sellerDescription = sellerDescription;
 	}
+	
+	public String getSellerImage() {
+		return sellerImage;
+	}
+	
+	public void setSellerImage(String sellerImage) {
+		this.sellerImage = sellerImage;
+	}
+
+	public int getSellerId() {
+		return sellerId;
+	}
 
 	@Override
 	public String toString() {
 		return "Seller [sellerId=" + sellerId + ", sellerName=" + sellerName + ", sellerAddress=" + sellerAddress
-				+ ", sellerDescription=" + sellerDescription + "]";
+				+ ", sellerDescription=" + sellerDescription + ", sellerImage=" + sellerImage + "]";
 	}
+	
 	
 	
 }

@@ -23,16 +23,23 @@
     			</ul>
 		</nav>
 		<div class="container">
-				<ul class="list-unstyled mb-0">
-				<div class="thumbnail">
-					<img src="${pageContext.request.contextPath}/resources/img/image${product.id}.jpg">
+			<div class="row">
+				
+				<div class="col-sm-6">
+					<div class="thumbnail">
+						<img style="width:450px; height:250px;" src="${pageContext.request.contextPath}/resources/img/${product.productImage}">
+					</div>
 				</div>
-            	<li class="mb-1"><span>Product Name: ${product.productName}</span></li>
-            	<li class="mb-1"><span>Seller :${product.productSeller}</span></li>
-            	<li class="mb-1"><span>Price : ${product.productPrice}</span></li>
-            	<li class="mb-1"><span>Condition : ${product.productCondition}</span></li>
-            	<li class="mb-1"><span>Guaranteed : ${product.productGuarantee}</span></li>
-		    </ul>
+				<div class="col-sm-6">
+					<ul class="list-unstyled mb-0">
+            			<li class="mb-1"><span>Product Name: ${product.productName}</span></li>
+            			<li class="mb-1"><span>Seller :${product.productSeller}</span></li>
+            			<li class="mb-1"><span>Price : ${product.productPrice}</span></li>
+            			<li class="mb-1"><span>Condition : ${product.productCondition}</span></li>
+            			<li class="mb-1"><span>Guaranteed : ${product.productGuarantee}</span></li>
+            		</ul>
+		    	</div>
+		    </div>
 		</div>
 	</div>
 </body>
