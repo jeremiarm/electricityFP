@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.electricity.entity.Products;
+import com.electricity.entity.Seller;
 import com.electricity.service.ProductService;
+import com.electricity.service.SellerService;
 
 @Controller
 public class WebController {
@@ -18,6 +20,8 @@ public class WebController {
 	@Autowired
 	private ProductService productService;
 	
+	@Autowired
+	private SellerService sellerService;
 	
 	@RequestMapping(value="/")
 	public String home() {
@@ -33,7 +37,11 @@ public class WebController {
 	}
 	
 	@RequestMapping(value="/shop")
-	public String shop() {
+	public String shop(Model theModel) {
+		List<Seller> theSellers = sellerService.getSellers();
+		
+		theModel.addAttribute("sellers", theSellers);
+		
 		return "shop";
 	}
 	

@@ -34,20 +34,19 @@
 		           </div>
 				</div>
 				<div class="col-sm-8">
+				<c:forEach var="tempSellers" items="${sellers}">
+				<c:url var="shopDetailsLink" value="/shop-detail">
+					<c:param name="sellerId" value="${tempSellers.sellerId}"/>
+				</c:url>
 					<div>
-		               <a class="shop1" href="shop-detail"></a>
+		               <img src="<c:url value="/resources/img/shop${tempSellers.sellerId}.jpg"/>"/>
 		               <ul class="list-unstyled mb-0">
-		               		<li class="mb-1"><span>Rival's Shop</span></li>
-		               		<li class="mb-1"><span>Click for detail</span></li>
+		               		<li class="mb-1"><span>${tempSellers.sellerName}</span></li>
+		               		<li class="mb-1"><span>${tempSellers.sellerAddress}</span></li>
+		               		<li class="mb-1"><span><a href="${shopDetailsLink}">Details</a></span></li>
 		               </ul>
 		            </div>
-		            <div style="clear: left;">
-		                <a class="shop2" href="#"></a>
-		               <ul class="list-unstyled mb-0">
-		               		<li class="mb-1"><span>F5 Shop</span></li>
-		               		<li class="mb-1"><span>Click for detail</span></li>
-		               </ul>
-		            </div>
+		           </c:forEach>
 		    	</div>
 			</div>
 		</div>
