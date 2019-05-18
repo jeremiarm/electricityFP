@@ -35,26 +35,19 @@
 		           </div>
 				</div>
 				<div class="col-sm-8">
+				<c:forEach var="tempProducts" items="${products}">
 					<div>
-		               <a class="laptop" href="product-detail"></a>
 		               <ul class="list-unstyled mb-0">
-		               		<li class="mb-1"><span>Laptop Asus</span></li>
-		               		<li class="mb-1"><span>Seller : Rival's Shop</span></li>
-		               		<li class="mb-1"><span>Click for detail</span></li>
+		               		<li class="mb-1"><span>${tempProducts.productName}</span></li>
+		               		<li class="mb-1"><span>${tempProducts.productPrice}</span></li>
+		               		<li class="mb-1"><span>${tempProducts.productDescription}</span></li>
 		               </ul>
-		            </div>
-		            <div style="clear: left;">
-		                <a class="handphone" href="#"></a>
-		               <ul class="list-unstyled mb-0">
-		               		<li class="mb-1"><span>Handphone Xiaomi mi5</span></li>
-		               		<li class="mb-1"><span>Seller : F5 shop</span></li>
-		               		<li class="mb-1"><span>Click for detail</span></li>
-		               </ul>
-		            </div>
-		    	</div>
+		    		</div>
+				</c:forEach>
+					
+				</div>
 			</div>
 		</div>
-			
 	</div>
 </body>
 </html>
