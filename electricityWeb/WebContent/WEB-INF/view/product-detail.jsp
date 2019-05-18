@@ -23,13 +23,15 @@
     			</ul>
 		</nav>
 		<div class="container">
-			<p class="laptop"></p>
-			<ul class="list-unstyled mb-0">
-            	<li class="mb-1"><span>Laptop Asus</span></li>
-            	<li class="mb-1"><span><a href="shop-detail">Seller : Rival's Shop</a></span></li>
-            	<li class="mb-1"><span>Price : Rp 5.000.000</span></li>
-            	<li class="mb-1"><span>Condition : Not used yet</span></li>
-            	<li class="mb-1"><span>Guaranteed : Yes</span></li>
+				<ul class="list-unstyled mb-0">
+				<div class="thumbnail">
+					<img src="${pageContext.request.contextPath}/resources/img/image${product.id}.jpg">
+				</div>
+            	<li class="mb-1"><span>Product Name: ${product.productName}</span></li>
+            	<li class="mb-1"><span>Seller :${product.productSeller}</span></li>
+            	<li class="mb-1"><span>Price : ${product.productPrice}</span></li>
+            	<li class="mb-1"><span>Condition : ${product.productCondition}</span></li>
+            	<li class="mb-1"><span>Guaranteed : ${product.productGuarantee}</span></li>
 		    </ul>
 		</div>
 	</div>

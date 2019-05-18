@@ -36,12 +36,18 @@
 				</div>
 				<div class="col-sm-8">
 				<c:forEach var="tempProducts" items="${products}">
+				<c:url var="productDetailsLink" value="/product-detail">
+		        		<c:param name="productId" value="${tempProducts.id}" />
+		        </c:url>
 					<div>
 		               <ul class="list-unstyled mb-0">
 		               		<li class="mb-1"><span>${tempProducts.productName}</span></li>
 		               		<li class="mb-1"><span>${tempProducts.productPrice}</span></li>
 		               		<li class="mb-1"><span>${tempProducts.productDescription}</span></li>
+		               		<li class="mb-1"><span><a href="${productDetailsLink}">Details</a></span></li>
 		               </ul>
+		               <br>
+		               <br>
 		    		</div>
 				</c:forEach>
 					
