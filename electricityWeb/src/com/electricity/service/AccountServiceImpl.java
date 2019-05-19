@@ -7,10 +7,15 @@ import com.electricity.entity.Account;
 @Service
 public class AccountServiceImpl implements AccountService {
 
+	@Autowired
+	private AccountDAO accountDAO;
+	
+	
 	@Override
+	@Transactional
 	public String checkAccount(Account theAccount) {
-		// TODO Auto-generated method stub
-		return null;
+		String result = accountDAO.checkAccount(theAccount);
+		return result;
 	}
 
 }
