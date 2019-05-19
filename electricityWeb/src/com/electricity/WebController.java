@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.electricity.entity.Account;
 import com.electricity.entity.Products;
 import com.electricity.entity.Seller;
+import com.electricity.service.AccountService;
 import com.electricity.service.ProductService;
 import com.electricity.service.SellerService;
 
@@ -27,6 +28,9 @@ public class WebController {
 	
 	@Autowired
 	private SellerService sellerService;
+	
+	@Autowired
+	private AccountService accountService;
 	
 	@RequestMapping(value="/")
 	public String home() {
@@ -135,7 +139,7 @@ public class WebController {
 	
 	@PostMapping("/login")
 	public String login(@ModelAttribute("account") Account theAccount, HttpSession webSession) {
-		String result = checkAccount(theAccount);
+		String result = accountService.checkAccount(theAccount);
 		if (result.equals("accepted")) {
 			webSession.setAttribute("username",theAccount.getAccountUsername());
 			return "index";
@@ -143,8 +147,5 @@ public class WebController {
 		else {
 			return "account-form";
 		}
-		
-	
-		return "";
 	}
 }

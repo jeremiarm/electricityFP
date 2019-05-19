@@ -17,10 +17,18 @@ public class Account {
 	private int accountId;
 	
 	@Column(name="account_username")
-	private int accountUsername;
+	private String accountUsername;
 	
 	@Column(name="account_password")
-	private int accountPassword;
+	private String accountPassword;
+
+	public void setAccountUsername(String accountUsername) {
+		this.accountUsername = accountUsername;
+	}
+
+	public void setAccountPassword(String accountPassword) {
+		this.accountPassword = accountPassword;
+	}
 
 	public int getAccountId() {
 		return accountId;
@@ -30,20 +38,12 @@ public class Account {
 		this.accountId = accountId;
 	}
 
-	public int getAccountUsername() {
+	public String getAccountUsername() {
 		return accountUsername;
 	}
 
-	public void setAccountUsername(int accountUsername) {
-		this.accountUsername = accountUsername;
-	}
-
-	public int getAccountPassword() {
+	public String getAccountPassword() {
 		return accountPassword;
-	}
-
-	public void setAccountPassword(int accountPassword) {
-		this.accountPassword = accountPassword;
 	}
 
 	@Override
