@@ -28,7 +28,7 @@ public class Products {
 	private String productGuarantee;
 	
 	@Column(name="product_seller")
-	private String productSeller;
+	private int productSeller;
 	
 	@Column(name="product_image")
 	private String productImage;
@@ -76,11 +76,11 @@ public class Products {
 		this.productGuarantee = productGuarantee;
 	}
 
-	public String getProductSeller() {
+	public int getProductSeller() {
 		return productSeller;
 	}
 
-	public void setProductSeller(String productSeller) {
+	public void setProductSeller(int productSeller) {
 		this.productSeller = productSeller;
 	}
 

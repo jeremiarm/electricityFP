@@ -27,4 +27,19 @@ public class ProductServiceImpl implements ProductService {
 		return productsDAO.getProduct(theId);
 	}
 
+	@Override
+	@Transactional
+	public void saveProduct(Products theProduct) {
+		productsDAO.saveProduct(theProduct);
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	@Transactional
+	public void deleteProduct(int theId) {
+		// TODO Auto-generated method stub
+		productsDAO.deleteProduct(theId);
+	}
+
 }

@@ -24,27 +24,25 @@
 		</nav>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-2 order-1">
+				<div class="col-sm-3 order-1">
 		           <div class="border p-4 rounded mb-4">
-		             <h3 class="mb-3 h6 text-uppercase text-black d-block">Categories</h3>
+		             <h3 class="mb-3 h6 text-uppercase text-black d-block">Admin Privileges</h3>
 		             <ul class="list-unstyled mb-0">
-		               <li class="mb-1"><a href="#" class="d-flex"><span>Laptop</span></a></li>
-		               <li class="mb-1"><a href="#" class="d-flex"><span>Handphone</span></a></li>
-		               <li class="mb-1"><a href="#" class="d-flex"><span>Charger</span></a></li>
+		               <li class="mb-1"><a href="${pageContext.request.contextPath}/product-edit" class="d-flex"><span>Product Settings</span></a></li>
 		             </ul>
 		           </div>
 				</div>
-				<div class="col-sm-10 order-2">
+				<div class="col-sm-9 order-2">
 				<c:forEach var="tempProducts" items="${products}">
 				<c:url var="productDetailsLink" value="/product-detail">
 		        		<c:param name="productId" value="${tempProducts.id}" />
 		        </c:url>
 		        	<br><br>
 					<div class="row border">
-					 	<div class="col-sm-6">
+					 	<div class="col-sm-7">
 		               		<img style="width:450px; height:250px;" src="<c:url value="/resources/img/${tempProducts.productImage}"/>"/>
 		               	</div>
-		               	<div class="col-sm-6">
+		               	<div class="col-sm-5">
 		               		<ul class="list-unstyled mb-0">
 		               			<li class="mb-1"><span>Nama			:${tempProducts.productName}</span></li>
 		               			<li class="mb-1"><span>Harga		:${tempProducts.productPrice}</span></li>
