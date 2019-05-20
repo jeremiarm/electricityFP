@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2019 at 10:16 AM
+-- Generation Time: May 20, 2019 at 11:59 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -33,16 +33,17 @@ CREATE TABLE `seller` (
   `seller_name` varchar(50) NOT NULL,
   `seller_address` text NOT NULL,
   `seller_description` text NOT NULL,
-  `seller_image` varchar(50) NOT NULL
+  `seller_image` varchar(50) NOT NULL,
+  `seller_contact` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `seller`
 --
 
-INSERT INTO `seller` (`seller_id`, `seller_name`, `seller_address`, `seller_description`,`seller_image`) VALUES
-(1, 'Rival\'s Shop', 'Jl. Diponegoro 14 Jakarta Selatan', 'Menjual spare part laptop, bekas dan baru','shop1.jpg'),
-(2, 'F5 Shop', 'Jl. Soekarno Hatta 57, Malang', 'Menjual handphone merk terbaru','shop2.jpg');
+INSERT INTO `seller` (`seller_id`, `seller_name`, `seller_address`, `seller_description`, `seller_image`, `seller_contact`) VALUES
+(1, 'Rival\'s Shop', 'Jl. Diponegoro 14 Jakarta Selatan', 'Menjual spare part laptop, bekas dan baru', 'shop1.jpg', '0812321321321'),
+(2, 'F5 Shop', 'Jl. Soekarno Hatta 57, Malang', 'Menjual handphone merk terbaru', 'shop2.jpg', '0215984164');
 
 --
 -- Indexes for dumped tables
@@ -53,6 +54,16 @@ INSERT INTO `seller` (`seller_id`, `seller_name`, `seller_address`, `seller_desc
 --
 ALTER TABLE `seller`
   ADD PRIMARY KEY (`seller_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `seller`
+--
+ALTER TABLE `seller`
+  MODIFY `seller_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

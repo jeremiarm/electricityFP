@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2019 at 10:15 AM
+-- Generation Time: May 20, 2019 at 11:58 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -44,11 +44,11 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `product_name`, `product_price`, `product_condition`, `product_guarantee`, `product_seller`, `product_image`, `product_description`) VALUES
-(1, 'Laptop ASUS K401L', 5000000, 'Baru', '2 Tahun', 0, 'image1.jpg', 'Laptop\r\nMSDOS\r\nIntel Core i5 - 5200U up to 2.7GHz\r\nRAM 4GB\r\nGPU GeForce 940M\r\nHDD 1TB\r\nI/O 4 USB 3.0, 1 HDMI, 1 Audio Jack 3.5mm, LAN Port, SD Card Slot, Charging Port\r\nModel Mirip Apple, Aluminium Finish, Speaker SonicMaster\r\nDisplay up to 1920x1080\r\nTouchpad ASUS SmartGesture'),
-(2, 'Smartphone OPPO A6s', 1000000, 'Bekas', 'Tidak Ada', 0, 'image2.jpg', 'KONDISI BARANG 90%'),
-(3, 'Charger ASUS K401L', 300000, 'Baru', '2 Bulan', 0, 'image3.jpg', 'Charger ASUS K401L (Kecil) ORI'),
-(4, 'Mouse Rexus', 150000, 'Baru', '2 Bulan', 0, 'image4.jpg', 'Mouse gaming kekinian..\r\nLengkap dengan lampu LED biru, serasa seperti pemain professional!!'),
-(5, 'Speaker Simbadda', 140000, 'Bekas', '1 Bulan', 0, 'image5.jpg', 'Suaranya lumayan.');
+(1, 'Laptop ASUS K401L', 5000000, 'Lebih Baru', '2 Tahun', 1, 'image1.jpg', 'LaptopMSDOSIntel Core i5 - 5200U up to 2.7GHzRAM 4GBGPU GeForce 940MHDD 1TBI/O 4 USB 3.0, 1 HDMI, 1 Audio Jack 3.5mm, LAN Port, SD Card Slot, Charging PortModel Mirip Apple, Aluminium Finish, Speaker SonicMasterDisplay up to 1920x1080Touchpad ASUS SmartGesture'),
+(2, 'Smartphone OPPO A6s', 1000000, 'Bekas', 'Tidak Ada', 2, 'image2.jpg', 'KONDISI BARANG 90%'),
+(3, 'Charger ASUS K401L', 300000, 'Baru', '2 Bulan', 1, 'image3.jpg', 'Charger ASUS K401L (Kecil) ORI'),
+(4, 'Mouse Rexus', 150000, 'Baru', '2 Bulan', 1, 'image4.jpg', 'Mouse gaming kekinian..\r\nLengkap dengan lampu LED biru, serasa seperti pemain professional!!'),
+(5, 'Speaker Simbadda', 140000, 'Bekas', '1 Bulan', 2, 'image5.jpg', 'Suaranya lumayan.');
 
 --
 -- Indexes for dumped tables
@@ -60,6 +60,16 @@ INSERT INTO `products` (`id`, `product_name`, `product_price`, `product_conditio
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_seller` (`product_seller`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
