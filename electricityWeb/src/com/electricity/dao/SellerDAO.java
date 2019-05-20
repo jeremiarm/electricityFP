@@ -10,7 +10,7 @@ public interface SellerDAO {
 	
 	public Seller getSeller(int theId);
 
-	public void saveSeller(Seller theProduct);
+	public void saveSeller(Seller theSeller);
 
 	public void deleteSeller(int theId);
 }

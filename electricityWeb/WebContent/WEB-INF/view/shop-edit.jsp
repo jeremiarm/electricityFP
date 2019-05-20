@@ -25,6 +25,10 @@
 		<div class="container">
 			<div class="row">
 				<div>
+				<br>
+				<input class="btn btn-secondary" type="button" value="Add Seller" onclick="window.location.href='showFormForAddSeller'; return false;"/>
+				<br>
+				<br>
 		        	<table class="table table-bordered table-striped">
 		        		<thead>
 		        			<tr>
@@ -39,6 +43,12 @@
 		        		</thead>
 		        		<tbody>
 		        			<c:forEach var="tempSellers" items="${sellers}">
+		        				<c:url var="updateSeller" value="/showFormForUpdateSeller">
+		        					<c:param name="sellerId" value="${tempSellers.sellerId}" />
+		        				</c:url>
+		        				<c:url var="deleteSeller" value="/deleteSeller">
+		        					<c:param name="sellerId" value="${tempSellers.sellerId}" />
+		        				</c:url>
 		        				<tr>
 		        					<td>${tempSellers.sellerId}</td>
 		        					<td>${tempSellers.sellerName}</td>
@@ -46,7 +56,11 @@
 		        					<td>${tempSellers.sellerDescription}</td>
 		        					<td>${tempSellers.sellerImage}</td>
 		        					<td>${tempSellers.sellerContact}</td>
-		        					<td>Update <br>Delete</td>
+		        					<td>
+		        						<a href="${updateSeller}">Update</a> 
+		        						<br>
+		        						<a href="${deleteSeller}" onclick="if (!(confirm('Are You sure you want to delete ${tempSeller.sellerName} ?'))) return false">Delete</a>
+		        					</td>
 		        				</tr>
 		        			</c:forEach>
 		        		</tbody>

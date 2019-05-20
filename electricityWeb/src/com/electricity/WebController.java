@@ -105,14 +105,30 @@ public class WebController {
 		return "product-form";
 	}
 	
+	@GetMapping("/showFormForAddSeller")
+	public String showFormForAddSeller(Model theModel) {
+		Seller theSeller = new Seller();
+		
+		theModel.addAttribute("seller", theSeller);
+		
+		return "shop-form";
+	}
+	
 	@PostMapping("/saveProduct")
-	public String saveCustomer(@ModelAttribute("product") Products theProduct) {
+	public String saveProduct(@ModelAttribute("product") Products theProduct) {
 		
 		productService.saveProduct(theProduct);
 		
 		return "redirect:/product-edit";
 	}
 	
+	@PostMapping("/saveSeller")
+	public String saveSeller(@ModelAttribute("seller") Seller theSeller) {
+		
+		sellerService.saveSeller(theSeller);
+		
+		return "redirect:/shop-edit";
+	}
 	
 	@GetMapping("/showFormForUpdateProduct")
 	public String showFormForUpdateProduct(@RequestParam("productId") int theId,
@@ -125,12 +141,31 @@ public class WebController {
 		return "product-form";
 	}
 	
+	@GetMapping("/showFormForUpdateSeller")
+	public String showFormForUpdateSeller(@RequestParam("sellerId") int theId,
+											Model theModel) {
+		
+		Seller theSeller = sellerService.getSeller(theId);
+		
+		theModel.addAttribute("seller", theSeller);
+		
+		return "shop-form";
+	}
+	
 	@GetMapping("/deleteProduct")
 	public String deleteProduct(@RequestParam("productId") int theId) {
 
 		productService.deleteProduct(theId);
 
 		return "redirect:/product-edit";
+	}
+	
+	@GetMapping("/deleteSeller")
+	public String deleteSeller(@RequestParam("sellerId") int theId) {
+
+		sellerService.deleteSeller(theId);
+
+		return "redirect:/shop-edit";
 	}
 	
 	@GetMapping("/showLoginForm")

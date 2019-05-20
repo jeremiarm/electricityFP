@@ -1,5 +1,7 @@
 package com.electricity.dao;
 
+import javax.persistence.NoResultException;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;

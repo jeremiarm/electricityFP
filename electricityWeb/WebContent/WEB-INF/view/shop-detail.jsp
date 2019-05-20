@@ -35,7 +35,6 @@
             			<li class="mb-1"><span>Seller Name: ${seller.sellerName}</span></li>
             			<li class="mb-1"><span>Seller Address :${seller.sellerAddress}</span></li>
             			<li class="mb-1"><span>Seller Description : ${seller.sellerDescription}</span></li>
-            			<li class="mb-1"><span>Seller Image : ${seller.sellerImage}</span></li>
             			<li class="mb-1"><span>Seller Contact : ${seller.sellerContact}</span></li>
             		</ul>
 		    	</div>
