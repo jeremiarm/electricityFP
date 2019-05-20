@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="<c:url value="resources/css/bootstrap.min.css"/>">
 <link rel="stylesheet" href="<c:url value="resources/background.css"/>"/>
 <meta charset="ISO-8859-1">
-<title>Product Add</title>
+<title>LOGIN AS ADMIN</title>
 </head>
 <body>
 		<div class ="text-center">
@@ -18,7 +18,7 @@
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     			<ul class="navbar-nav">
       			<li class="nav-item"><a class="nav-link" href="/ElectricityWeb">Home</a></li>
-      			<li class="nav-item active"><a class="nav-link" href="product">Products</a></li>
+      			<li class="nav-item"><a class="nav-link" href="product">Products</a></li>
       			<li class="nav-item"><a class="nav-link" href="shop">Shops</a></li>
       			<li class="nav-item"><a class="nav-link" href="contact">Contact Us</a></li>
     			</ul>

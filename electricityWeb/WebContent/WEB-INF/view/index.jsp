@@ -20,10 +20,20 @@
       			<li class="nav-item"><a class="nav-link" href="product">Products</a></li>
       			<li class="nav-item"><a class="nav-link" href="shop">Shops</a></li>
       			<li class="nav-item"><a class="nav-link" href="contact">Contact Us</a></li>
+      			<c:choose>
+  					<c:when  test="${sessionScope.username != null}">
+    					<li class="nav-item"><a class="nav-link" href="logout">Logout</a></li>
+    					<li class="nav-item"><a class="nav-link">${sessionScope.username}</a></li>
+				  	</c:when>
+				  	<c:otherwise>
+				  		<li class="nav-item"><a class="nav-link" href="showLoginForm">Login</a></li>
+				  	</c:otherwise>
+				</c:choose>
     			</ul>
 		</nav>
 		<div class="container">
 			This website gives information about gadget items(such as laptop, handphone etc) and where to sell it.
+			${sessionScope.username }
 		</div>
 	</div>
 </body>

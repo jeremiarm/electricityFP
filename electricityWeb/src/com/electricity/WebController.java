@@ -2,6 +2,7 @@ package com.electricity;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,7 +80,8 @@ public class WebController {
 	}
 	
 	@GetMapping(value="/product-edit")
-	public String productEdit(Model theModel) {
+	public String productEdit(Model theModel,HttpSession session) {
+		if (session.getAttribute("username")==null) return "redirect:/product";
 		List<Products> theProducts = productService.getProducts();
 		
 		theModel.addAttribute("products", theProducts);
@@ -88,7 +90,8 @@ public class WebController {
 	}
 	
 	@GetMapping(value="/shop-edit")
-	public String shopEdit(Model theModel) {
+	public String shopEdit(Model theModel,HttpSession session) {
+		if (session.getAttribute("username")==null) return "redirect:/shop";
 		List<Seller> theSellers = sellerService.getSellers();
 		
 		theModel.addAttribute("sellers", theSellers);
@@ -169,7 +172,8 @@ public class WebController {
 	}
 	
 	@GetMapping("/showLoginForm")
-	public String showLoginForm(Model theModel) {
+	public String showLoginForm(Model theModel, HttpSession session) {
+		if (session.getAttribute("username")!=null) return "redirect:/";
 		Account theAccount = new Account();
 		
 		theModel.addAttribute("account", theAccount);
@@ -179,16 +183,23 @@ public class WebController {
 	
 	@PostMapping("/login")
 	public String login(@ModelAttribute("account") Account theAccount, HttpSession session) {
-		session.invalidate();
 		String result = accountService.checkAccount(theAccount);
-		System.out.println(result);
+		//System.out.println(result);
 		if (result.equals("accepted")) {
-			session.setAttribute("username",theAccount.getAccountUsername());
+			session.setAttribute("username", theAccount.getAccountUsername());
+			System.out.println(session.getAttribute("username"));
 			return "redirect:/";
 		}
 		else {
-			session.invalidate();
+			session.removeAttribute("username");
+			System.out.println(session.getAttribute("username"));
 			return "redirect:/showLoginForm";
 		}
+	}
+	
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		session.removeAttribute("username");
+		return "redirect:/";
 	}
 }
