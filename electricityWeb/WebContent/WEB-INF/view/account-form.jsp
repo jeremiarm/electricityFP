@@ -28,11 +28,11 @@
 	<table class="table table-bordered">
 		<tbody>
 			<tr>
-				<td><label>Product Name:</label></td>
+				<td><label>Username:</label></td>
 				<td><form:input path="accountUsername"/></td>
 			</tr>
 			<tr>
-				<td><label>Product Price:</label></td>
+				<td><label>Password:</label></td>
 				<td><form:input path="accountPassword"/></td>
 			</tr>
 			<tr>

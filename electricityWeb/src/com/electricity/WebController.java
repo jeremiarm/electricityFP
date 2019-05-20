@@ -138,14 +138,17 @@ public class WebController {
 	}
 	
 	@PostMapping("/login")
-	public String login(@ModelAttribute("account") Account theAccount, HttpSession webSession) {
+	public String login(@ModelAttribute("account") Account theAccount, HttpSession session) {
+		session.invalidate();
 		String result = accountService.checkAccount(theAccount);
+		System.out.println(result);
 		if (result.equals("accepted")) {
-			webSession.setAttribute("username",theAccount.getAccountUsername());
-			return "index";
+			session.setAttribute("username",theAccount.getAccountUsername());
+			return "redirect:/";
 		}
 		else {
-			return "account-form";
+			session.invalidate();
+			return "redirect:/showLoginForm";
 		}
 	}
 }

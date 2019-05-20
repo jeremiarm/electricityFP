@@ -19,14 +19,16 @@ public class AccountDAOImpl implements AccountDAO {
 		Session currentSession = sessionFactory.getCurrentSession();
 		String user = theAccount.getAccountUsername();
 		String pass = theAccount.getAccountPassword();
-		Query<Account> theQuery = currentSession.createQuery("from Account where account_username=:username and account_password=:password",Account.class);
-		theQuery.setParameter("username", user);
-		theQuery.setParameter("password", pass);
-		Account tempAccount = theQuery.getSingleResult();
-		if (user.equals(tempAccount.getAccountUsername())) {
+		try {
+			Query<Account> theQuery = currentSession.createQuery("from Account where account_username=:username and account_password=:password",Account.class);
+			theQuery.setParameter("username", user);
+			theQuery.setParameter("password", pass);
+			Account tempAccount = theQuery.getSingleResult();
 			return "accepted";
 		}
-		else return "refused";
+		catch(NoResultException ab) {
+			return "refused";
+		}
 	}
 
 }
