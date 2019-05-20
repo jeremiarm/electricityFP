@@ -23,14 +23,23 @@
     			</ul>
 		</nav>
 		<div class="container">
-			<p class="shop1"></p>
-			<ul class="list-unstyled mb-0">
-            	<li class="mb-1"><span>Rival's Shop</span></li>
-            	<li class="mb-1"><span>Location : Manyar 6, Surabaya</span></li>
-            	<li class="mb-1"><span>Rating by web : 4.5/5</span></li>
-            	<li class="mb-1"><span>Contact : 0812345678</span></li>
-            	<li class="mb-1"><span>Menjual laptop, charger laptop</span></li>
-		    </ul>
+			<div class="row">
+				
+				<div class="col-sm-6">
+					<div class="thumbnail">
+						<img style="width:450px; height:250px;" src="${pageContext.request.contextPath}/resources/img/${seller.sellerImage}">
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<ul class="list-unstyled mb-0">
+            			<li class="mb-1"><span>Seller Name: ${seller.sellerName}</span></li>
+            			<li class="mb-1"><span>Seller Address :${seller.sellerAddress}</span></li>
+            			<li class="mb-1"><span>Seller Description : ${seller.sellerDescription}</span></li>
+            			<li class="mb-1"><span>Seller Image : ${seller.sellerImage}</span></li>
+            			<li class="mb-1"><span>Seller Contact : ${seller.sellerContact}</span></li>
+            		</ul>
+		    	</div>
+		    </div>
 		</div>
 	</div>
 </body>

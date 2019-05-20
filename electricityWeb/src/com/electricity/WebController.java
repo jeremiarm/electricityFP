@@ -54,7 +54,12 @@ public class WebController {
 	}
 	
 	@RequestMapping(value="/shop-detail")
-	public String shopdetail() {
+	public String shopdetail(@RequestParam("sellerId") int theId, Model theModel) {
+		
+		Seller theSellers = sellerService.getSeller(theId);
+		
+		theModel.addAttribute("seller", theSellers);
+		
 		return "shop-detail";
 	}
 	

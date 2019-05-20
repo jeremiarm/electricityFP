@@ -21,4 +21,25 @@ public class SellerServiceImpl implements SellerService {
 		return sellerDAO.getSellers();
 	}
 
+	@Override
+	@Transactional
+	public Seller getSeller(int theId) {
+		return sellerDAO.getSeller(theId);
+	}
+
+	@Override
+	@Transactional
+	public void saveSeller(Seller theSeller) {
+		sellerDAO.saveSeller(theSeller);
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	@Transactional
+	public void deleteSeller(int theId) {
+		// TODO Auto-generated method stub
+		sellerDAO.deleteSeller(theId);
+	}
+	
 }
